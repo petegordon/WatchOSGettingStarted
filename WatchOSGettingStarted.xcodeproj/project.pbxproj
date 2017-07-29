@@ -107,6 +107,8 @@
 		4E60AB801F2D28C000F0FB49 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		4E60AB821F2D28C000F0FB49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E60AB841F2D28C000F0FB49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E60AB981F2D33EF00F0FB49 /* WatchOSGettingStarted WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchOSGettingStarted WatchKit App.entitlements"; sourceTree = "<group>"; };
+		4E60AB991F2D343C00F0FB49 /* WatchOSGettingStarted WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchOSGettingStarted WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 		4E60AB681F2D28C000F0FB49 /* WatchOSGettingStarted WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				4E60AB981F2D33EF00F0FB49 /* WatchOSGettingStarted WatchKit App.entitlements */,
 				4E60AB691F2D28C000F0FB49 /* Interface.storyboard */,
 				4E60AB6C1F2D28C000F0FB49 /* Assets.xcassets */,
 				4E60AB6E1F2D28C000F0FB49 /* Info.plist */,
@@ -209,6 +212,7 @@
 		4E60AB771F2D28C000F0FB49 /* WatchOSGettingStarted WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4E60AB991F2D343C00F0FB49 /* WatchOSGettingStarted WatchKit Extension.entitlements */,
 				4E60AB7A1F2D28C000F0FB49 /* InterfaceController.swift */,
 				4E60AB7C1F2D28C000F0FB49 /* ExtensionDelegate.swift */,
 				4E60AB7E1F2D28C000F0FB49 /* NotificationController.swift */,
@@ -351,11 +355,21 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = N66Z6F7XEL;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					4E60AB721F2D28C000F0FB49 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = N66Z6F7XEL;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -614,6 +628,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WatchOSGettingStarted WatchKit Extension/WatchOSGettingStarted WatchKit Extension.entitlements";
 				DEVELOPMENT_TEAM = N66Z6F7XEL;
 				INFOPLIST_FILE = "WatchOSGettingStarted WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -631,6 +646,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WatchOSGettingStarted WatchKit Extension/WatchOSGettingStarted WatchKit Extension.entitlements";
 				DEVELOPMENT_TEAM = N66Z6F7XEL;
 				INFOPLIST_FILE = "WatchOSGettingStarted WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -649,6 +665,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "WatchOSGettingStarted WatchKit App/WatchOSGettingStarted WatchKit App.entitlements";
 				DEVELOPMENT_TEAM = N66Z6F7XEL;
 				IBSC_MODULE = WatchOSGettingStarted_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchOSGettingStarted WatchKit App/Info.plist";
@@ -667,6 +684,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "WatchOSGettingStarted WatchKit App/WatchOSGettingStarted WatchKit App.entitlements";
 				DEVELOPMENT_TEAM = N66Z6F7XEL;
 				IBSC_MODULE = WatchOSGettingStarted_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchOSGettingStarted WatchKit App/Info.plist";

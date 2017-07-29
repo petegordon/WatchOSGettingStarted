@@ -1,14 +1,43 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchOSGettingStarted_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Pete's Watch" id="lD6-2D-5zo"/>
+                        <button width="1" alignment="left" title="Audio Recorder" id="Hv2-IG-d9O">
+                            <connections>
+                                <action selector="buttonAudioRecorder" destination="AgC-eL-Hgc" id="eje-8k-xN4"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="PLAY" enabled="NO" id="rFM-9r-HEe">
+                            <connections>
+                                <action selector="buttonAudioPlay" destination="AgC-eL-Hgc" id="0Hg-eY-04y"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Dictation Input" id="oUz-Dt-rU1">
+                            <connections>
+                                <action selector="buttonDictation" destination="AgC-eL-Hgc" id="brK-DX-9LF"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="btnAudioPlay" destination="rFM-9r-HEe" id="W5b-9S-cTn"/>
+                        <outlet property="btnAudioRecorder" destination="Hv2-IG-d9O" id="5Ic-q8-0jp"/>
+                        <outlet property="btnDictationInput" destination="oUz-Dt-rU1" id="75z-G0-CNS"/>
+                        <outlet property="displayLabel" destination="lD6-2D-5zo" id="qRS-cG-Arc"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
@@ -31,7 +60,7 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="WatchOSGettingStarted_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
