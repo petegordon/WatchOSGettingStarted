@@ -35,7 +35,8 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate  {
     }
     
     func recordAndRecognizeSpeech(){
-        guard let node = audioEngine.inputNode else { return }
+        let node = audioEngine.inputNode
+
         let recordingFormat = node.outputFormat(forBus: 0)
         node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat){ buffer, _ in self.request.append(buffer)
         }
