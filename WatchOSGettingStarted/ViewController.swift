@@ -59,6 +59,38 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate  {
                 let bestString = result.bestTranscription.formattedString
                 self.textOutput.text = bestString
                 
+                //if timespan exists add as event on calendar
+                /*
+                 // Create an Event Store instance
+                 let eventStore = EKEventStore();
+                 
+                 // Use Event Store to create a new calendar instance
+                 if let calendarForEvent = eventStore.calendarWithIdentifier(self.calendar.calendarIdentifier)
+                 {
+                 let newEvent = EKEvent(eventStore: eventStore)
+                 
+                 newEvent.calendar = calendarForEvent
+                 newEvent.title = self.eventNameTextField.text ?? "Some Event Name"
+                 newEvent.startDate = self.eventStartDatePicker.date
+                 newEvent.endDate = self.eventEndDatePicker.date
+                 
+                 // Save the calendar using the Event Store instance
+                 
+                 do {
+                 try eventStore.saveEvent(newEvent, span: .ThisEvent, commit: true)
+                 delegate?.eventDidAdd()
+                 
+                 self.dismissViewControllerAnimated(true, completion: nil)
+                 } catch {
+                 let alert = UIAlertController(title: "Event could not save", message: (error as NSError).localizedDescription, preferredStyle: .Alert)
+                 let OKAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                 alert.addAction(OKAction)
+                 
+                 self.presentViewController(alert, animated: true, completion: nil)
+                 }
+                 }
+                     */
+                
             }else if let error = error {
                 print(error)
             }
